@@ -1,9 +1,9 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación.Aquí deberás desarrollar la lógica para resolver el problema.
 
-// Creamos un arreglo vacío para almacenar los nombres de los amigos
+//#5 Creamos un arreglo vacío para almacenar los nombres de los amigos ingresados desde el input
 let listaDeAmigos = [];
 
-// Función que se ejecuta al hacer clic en el botón "Añadir"
+//Función que se ejecuta al hacer clic en el botón "Añadir" usando el atributo onclick en el index
 function agregarAmigo() {
     //#1. Capturar el valor del campo de entrada usando su ID
     const input = document.getElementById("amigo");
@@ -17,8 +17,7 @@ function agregarAmigo() {
 
     //#3. Si el nombre es válido, lo agregamos al arreglo usando .push()
     listaDeAmigos.push(nombreAmigo);
-
-    //#3También lo mostramos visualmente en la lista HTML
+    //y lo mostramos visualmente en la lista HTML
     const listaHTML = document.getElementById("listaAmigos");
 
     // Creamos un nuevo elemento <li> para mostrar el nombre en pantalla

@@ -20,14 +20,21 @@
         <section class="input-section">
             <h2 class="section-title">Digite el nombre de sus amigos</h2>
             <div class="input-wrapper">
+                <!-- Campo de entrada de texto -->
+                <!--Este input tiene un ID ("amigo") que se usa con getElementById en app.js-->
                 <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
+                <!-- Botón para añadir nombre -->
+                <!--El botón llama a la función agregarAmigo() definida en app.js -->
                 <button class="button-add" onclick="agregarAmigo()">Añadir</button>
             </div>
-           
+            <!-- Lista que se llenará con los nombres agregados -->
+            <!-- Se añade un <li> dentro de este <ul> con cada nuevo nombre -->
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+            <!-- En esta Lista se mostrará el resultado del sorteo (a usar más adelante) -->
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container">
+                <!-- Botón para sortear amigos (implementación pendiente en app.js) -->
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
@@ -35,7 +42,7 @@
             </div>
         </section>
     </main>
-
+    <!--El script app.js se carga al final del body y ejecuta las funciones definidas -->
     <script src="app.js" defer></script>
 </body>
 </html>

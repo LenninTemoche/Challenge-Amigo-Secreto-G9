@@ -16,6 +16,27 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 ---
 
+---
+
+## 📌 Códificación (En proceso):
+
+- .document.getElementById("amigo"): selecciona el campo de texto donde se escribe el nombre.
+
+- .value: obtiene el texto que escribió el usuario.
+
+- .trim(): elimina espacios extra al principio o final del texto.
+
+- .alert("mensaje"): muestra una ventana emergente al usuario.
+
+- .push(): método de los arreglos para agregar un nuevo valor al final.
+
+- .document.createElement("li"): crea un nuevo elemento de lista en el DOM.
+
+- .appendChild(): inserta un nuevo elemento como hijo de otro (en este caso, a la lista).
+
+
+---
+
 ## 🚀 Cómo usar
 
 1. Accede a la [aplicación desplegada](https://challenge-amigo-secreto-g9.vercel.app/)

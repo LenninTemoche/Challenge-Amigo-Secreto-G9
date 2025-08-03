@@ -17,17 +17,46 @@ function agregarAmigo() {
 
     //#3. Si el nombre es válido, lo agregamos al arreglo usando .push()
     listaDeAmigos.push(nombreAmigo);
-    //y lo mostramos visualmente en la lista HTML
-    const listaHTML = document.getElementById("listaAmigos");
-
-    // Creamos un nuevo elemento <li> para mostrar el nombre en pantalla
-    const nuevoItem = document.createElement("li");
-    nuevoItem.textContent = nombreAmigo;
-
-    // Agregamos ese <li> a la lista existente en el HTML
-    listaHTML.appendChild(nuevoItem);
 
     //#4. Limpiar el campo de entrada para que el usuario pueda escribir otro nombre
     input.value = "";
+
+    // Llamamos a la función que muestra los amigos en la lista HTML - separamos un poco  la lógica
+    mostrarListaDeAmigos();
+
+    //y lo mostramos visualmente en la lista HTML
+    //const listaHTML = document.getElementById("listaAmigos"); //cambiamos a mostrarListaDeAmigos()
+
+    // Creamos un nuevo elemento <li> para mostrar el nombre en pantalla
+    //const nuevoItem = document.createElement("li");//cambiamos a mostrarListaDeAmigos()
+    //nuevoItem.textContent = nombreAmigo;
+
+    // Agregamos ese <li> a la lista existente en el HTML
+    //listaHTML.appendChild(nuevoItem);//cambiamos a mostrarListaDeAmigos()
+
+    //#4. Limpiar el campo de entrada para que el usuario pueda escribir otro nombre
+    //input.value = "";
+}
+
+// Agregamos la nueva función: mostrarListaDeAmigos
+// Esta función se encarga de mostrar todos los nombres en el HTML
+function mostrarListaDeAmigos() {
+    //#6: Obtenemos el elemento de la lista del HTML
+    const listaHTML = document.getElementById("listaAmigos");
+
+    //#7: Limpiamos la lista existente para evitar duplicados
+    listaHTML.innerHTML = "";
+
+    //#8: Recorremos el array de amigos usando un bucle for
+    for (let i = 0; i < listaDeAmigos.length; i++) {
+        const nombre = listaDeAmigos[i];
+
+        //#9: Creamos un nuevo <li> para cada nombre
+        const nuevoItem = document.createElement("li");
+        nuevoItem.textContent = nombre;
+
+        // Lo agregamos a la lista en el HTML
+        listaHTML.appendChild(nuevoItem);
+    }
 }
 

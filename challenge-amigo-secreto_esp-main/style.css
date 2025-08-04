@@ -146,15 +146,20 @@ ul {
 .button-draw {
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 10px 40px;
+    padding: 15px 30px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    font-family: "Inter", sans-serif;
+    border: 2px solid #000;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    white-space: nowrap; /* No dividir texto */
 }
 
 .button-draw img {
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .button-draw:hover {
@@ -164,10 +169,11 @@ ul {
 /* Se agrega contenedor horizontal para los botones de sorteo y reinicio */
 .button-container-row {
     display: flex;
-    gap: 10px; /* Espacio entre botones */
-    margin-top: 20px;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px; /* Espacio entre botones */
+    margin-top: 25px;
+    flex-wrap: nowrap;
 }
 
 /* Botón de reiniciar con forma ovalada y estilo coherente */
@@ -181,6 +187,7 @@ ul {
     font-family: "Inter", sans-serif;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
 }
 
 .button-reset:hover {

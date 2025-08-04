@@ -42,6 +42,39 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 - Vercel (para el deploy)
 
 ---
+
+## 👉 Despliegue de la aplicación en Vercel
+
+<p align="center">
+  <img src="challenge-amigo-secreto_esp-main/assets/new-proyect-vercel.png" alt="Vista previa del juego" width="500">
+</p>
+
+### Pasos para el despliegue en Vercel 
+- Vercel se integra directamente con GitHub para facilitar el despliegue. Inicia sesión o registrate en  https://vercel.com/new
+- Importa tu proyecto en Vercel:
+  - Haz clic en el botón "Add New Project" (Agregar nuevo proyecto).
+  - Selecciona el repositorio de GitHub que contiene tu proyecto.
+  - Configura la implementación.
+  - Vercel detectará automáticamente la configuración necesaria para tu proyecto.
+- Haz clic en el botón "Deploy" (Implementar).
+- Vercel construirá y desplegará tu proyecto en una URL única.
+¡Listo! Tu proyecto estará en vivo y accesible a través de la URL proporcionada por Vercel.
+
+- Si prefieres puedes optar por el despligue en GitHub Pages [Paso a Paso para activar tu proyecto en GitHub Pages](https://www.aluracursos.com/blog/github-pages)
+- Encuentra más información sobre el despliegue en Vercel en [Heroku, Vercel y otras opciones de cloud como plataforma](https://www.aluracursos.com/blog/heroku-vercel-y-otras-opciones-de-cloud-como-plataforma)
+
+---
+
+## ✨ Funcionalidades 
+
+- Agregar participantes a una lista.
+- Validación para evitar nombres duplicados o vacíos.
+- Validación para ingresar sólo texto.
+- Sorteo aleatorio que asigna a cada participante un "amigo secreto".
+- Interfaz simple, intuitiva y responsiva.
+
+---
+
 ## ✨ Resumen de las funcionalidades implementadas
 
 | Paso | Acción                         | ¿Dónde se implementa?       | Descripción                                                                 |
@@ -78,4 +111,44 @@ cd Challenge-Amigo-Secreto-G9
 npm install
 # 4. Inicia el servidor de desarrollo
 npm run dev
+```
+
+---
+
+## 📁 Estructura del proyecto
+
+```text
+challenge-amigo-secreto_esp-main/
+├── index.html              # Página principal del juego
+├── style.css               # Estilos del juego
+├── app.js                  # Lógica del juego en JavaScript
+├── README.md               # Instrucciones de la aplicación
+└── assets/                 # Carpeta de imágenes
+    ├── amigo-secreto.png
+    ├── play-circle-outline.png new-proyect-vercel.png
+    ├── new-proyect-vercel.png        # Vista previa nuevo proyecto en Vercel
+    └── challenge-amigo-secreto.png   # Vista previa del juego en Readme
+```
+---
+
+🧠 Objetivo del proyecto
+
+Este proyecto fue creado con el objetivo poner en práctica los conocimientos  adquiridos en 1ra etapa de formación Lógica de Programación con JavaScript, del programa ONE - Oracle Next Education G9.
+Está disponible para fines educativos, puedes modificarlo libremente.
+
+---
+
+📝 Notas
+
+Asegúrate de tener todas las imágenes en la carpeta assets/.
+El juego es completamente funcional sin necesidad de servidor o dependencias externas.
+Ideal para practicar lógica de programación y manipulación del DOM JavaScript.
+
+---
+
+✨ Créditos
+
+Desarrollado como ejercicio de Challenge Amigo Secreto, del programa ONE - Oracle Next Education G9.
+
+---
 

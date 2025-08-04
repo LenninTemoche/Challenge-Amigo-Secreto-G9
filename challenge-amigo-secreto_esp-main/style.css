@@ -160,3 +160,30 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+/* Se agrega contenedor horizontal para los botones de sorteo y reinicio */
+.button-container-row {
+    display: flex;
+    gap: 10px; /* Espacio entre botones */
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botón de reiniciar con forma ovalada y estilo coherente */
+.button-reset {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border: 2px solid #000;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-reset:hover {
+    background-color: #a1a1a1;
+}
+

@@ -15,16 +15,16 @@ function agregarAmigo() {
         return; // Detenemos la ejecución si no hay nombre válido
     }
     //Agregamos validaciones
-    //#14 Validar si el nombre ya está en la lista (ignorando mayúsculas/minúsculas)
+    //#15 Validar si el nombre ya está en la lista (ignorando mayúsculas/minúsculas)
     const nombreRepetido = listaDeAmigos.some(amigo => amigo.toLowerCase() === nombreAmigo.toLowerCase());
     if (nombreRepetido) {
         alert("Este nombre ya fue agregado.");
         return;
     }
-    //#15 Validar que el nombre contenga solo letras
+    //#16 Validar que el nombre contenga solo letras
     const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
     if (!soloLetras.test(nombreAmigo)) {
-        alert("Por favor, ingrese solo letras.");
+        alert("Por favor, ingrese solo texto.");
         return;
     }
 
@@ -82,7 +82,7 @@ function sortearAmigo() {
     resultado.innerHTML = `<li>${amigoSorteado} es tu amigo secreto </li>`;
 }
 
-// Función para reiniciar la lista de amigos y limpiar resultados
+//14 Función para reiniciar la lista de amigos y limpiar resultados
 function reiniciarLista() {
     // Vaciar el array
     listaDeAmigos = [];
@@ -94,7 +94,7 @@ function reiniciarLista() {
     document.getElementById("resultado").innerHTML = "";
 }
 
-//#16 Detectar si se presiona Enter en el campo de entrada
+//#17 Detectar si se presiona Enter en el campo de entrada
 document.getElementById("amigo").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         agregarAmigo(); // Ejecuta la misma función del botón

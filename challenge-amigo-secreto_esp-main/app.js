@@ -79,13 +79,13 @@ function sortearAmigo() {
         return;
     };
     //#21 Validar cuando hay 1 nombre en las listas
-    if ((listaDeAmigos.length === 1) || (listaDeAmigos.length === 1)) {
+    if ((listaDeAmigos.length === 1) || (listaNoSorteados.length === 1)) {
         alert("Sólo hay 1 nombre en la lista para sortear.");
         document.getElementById("resultado").innerHTML = `<li>Ingrese más nombres a lista para Iniciar sorteo!</li>`;
         return;
     };
     //#22 Validar cuando hay 2 nombres en las listas
-    if ((listaNoSorteados.length === 2) || (listaDeAmigos.length === 2)) {
+    if ((listaDeAmigos.length === 2) || (listaNoSorteados.length === 2)) {
         alert("¡Agregue más nombres a la lista para sortear!");
         document.getElementById("resultado").innerHTML = `<li>Agregue más nombres o reinicie para volver a sortear</li>`;
         return;
@@ -120,8 +120,9 @@ function sortearAmigo() {
 
 //14 Función para reiniciar la lista de amigos y limpiar resultados
 function reiniciarLista() {
-    // Vaciar el array
+    // Vaciar los arrays
     listaDeAmigos = [];
+    listaNoSorteados = [];
 
     // Limpiar la lista visual en el HTML
     document.getElementById("listaAmigos").innerHTML = "";

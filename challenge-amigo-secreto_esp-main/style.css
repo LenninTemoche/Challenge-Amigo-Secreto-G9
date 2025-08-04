@@ -198,3 +198,8 @@ ul {
     background-color: #a1a1a1;
 }
 
+.sorteado {
+  text-decoration: line-through;
+  color: orangered;
+  opacity: 0.7;
+}

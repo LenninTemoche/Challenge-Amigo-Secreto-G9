@@ -169,11 +169,15 @@ ul {
 /* Se agrega contenedor horizontal para los botones de sorteo y reinicio */
 .button-container-row {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* centra el grupo completo */
     align-items: center;
-    gap: 12px; /* Espacio entre botones */
+    gap: 20px; /* más espacio si es necesario */
     margin-top: 25px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* asegura que estén en la misma línea */
+    width: 100%;
+    max-width: 600px; /* limita el ancho para evitar desbordes */
+    padding: 0 20px; /* Espacio lateral para móviles */
+    box-sizing: border-box;
 }
 
 /* Botón de reiniciar con forma ovalada y estilo coherente */

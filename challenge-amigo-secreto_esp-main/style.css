@@ -146,7 +146,7 @@ ul {
 .button-draw {
     display: flex;
     align-items: center;
-    padding: 15px 30px;
+    padding: 18px 30px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
@@ -170,9 +170,9 @@ ul {
 .button-container-row {
     display: flex;
     justify-content: center; /* centra el grupo completo */
-    align-items: center;
-    gap: 20px; /* más espacio si es necesario */
-    margin-top: 25px;
+    align-items: stretch; /* Asegura que ambos botones tengan la misma altura */
+    gap: 35px; /* más espacio si es necesario */
+    margin-top: 30px;
     flex-wrap: wrap; /* asegura que estén en la misma línea */
     width: 100%;
     max-width: 600px; /* limita el ancho para evitar desbordes */
@@ -186,7 +186,7 @@ ul {
     color: var(--color-text);
     border: 2px solid #000;
     border-radius: 25px;
-    padding: 15px 30px;
+    padding: 18px 30px;
     font-size: 16px;
     font-family: "Inter", sans-serif;
     cursor: pointer;

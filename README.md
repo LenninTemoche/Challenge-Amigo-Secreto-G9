@@ -3,13 +3,13 @@
 
 Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleatorio para elegir al "amigo secreto".  
 
-## [👉 Ver la aplicación en Vercel](https://challenge-amigo-secreto-g9.vercel.app/)
+## 👉 [Ver la aplicación en Vercel](https://challenge-amigo-secreto-g9.vercel.app/)
 
 <p align="center">
-  <img src="challenge-amigo-secreto_esp-main/assets/challenge-amigo-secreto.png" alt="Vista previa del juego" width="500">
+  <a href="challenge-amigo-secreto_esp-main/assets/challenge-amigo-secreto.png">
+    <img src="challenge-amigo-secreto_esp-main/assets/challenge-amigo-secreto.png" alt="Vista previa del juego" width="500">
+  </a>
 </p>
-
-
 
 ---
 
@@ -18,19 +18,19 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 - Agregar participantes a una lista.
 - Validación para evitar nombres duplicados o vacíos.
 - Validación para ingresar sólo texto.
+- Se pueden ingresar nombres presionando la tecla Enter.
 - Sorteo aleatorio que asigna a cada participante un "amigo secreto".
+- Opción para Reiniciar una vez seleccionado el "amigo secreto".
 - Interfaz simple, intuitiva y responsiva.
 
 ---
 
----
+## ✨ Cómo usar
 
-## 🚀 Cómo usar
-
-1. Accede a la [aplicación desplegada](https://challenge-amigo-secreto-g9.vercel.app/)
+1. Accede a la <a href="https://challenge-amigo-secreto-g9.vercel.app/">aplicación desplegada</a>
 2. Ingresa los nombres de todos los participantes
 3. Haz clic en “Realizar sorteo”
-4. Descubre quién es el amigo secreto de cada uno 🎉
+4. Descubre quién es el amigo secreto seleccionado por  sorteo 🎉
 
 ---
 
@@ -42,6 +42,32 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 - Vercel (para el deploy)
 
 ---
+
+## 🚀 Despliegue de la aplicación en Vercel
+
+<p align="center">
+  <a href="challenge-amigo-secreto_esp-main/assets/new-proyect-vercel.png">
+    <img src="challenge-amigo-secreto_esp-main/assets/new-proyect-vercel.png" alt="Vista previa de Vercel" width="500">
+  </a>
+</p>
+
+### Pasos para el despliegue en Vercel 
+- Vercel se integra directamente con GitHub para facilitar el despliegue. Inicia sesión o registrate en  https://vercel.com/new
+- Importa tu proyecto en Vercel:
+  - Haz clic en el botón "Add New Project" (Agregar nuevo proyecto).
+  - Selecciona el repositorio de GitHub que contiene tu proyecto.
+  - Configura la implementación.
+  - Vercel detectará automáticamente la configuración necesaria para tu proyecto.
+- Haz clic en el botón "Deploy" (Implementar).
+- Vercel construirá y desplegará tu proyecto en una URL única.
+¡Listo! Tu proyecto estará en vivo y accesible a través de la URL proporcionada por Vercel.
+- Si prefieres, puedes optar por el despliegue en GitHub Pages: [Paso a Paso para activar tu proyecto en GitHub Pages](https://www.aluracursos.com/blog/github-pages)
+- Encuentra más información sobre el despliegue en Vercel en: [Heroku, Vercel y otras opciones de cloud como plataforma](https://www.aluracursos.com/blog/heroku-vercel-y-otras-opciones-de-cloud-como-plataforma)
+
+
+---
+---
+
 ## ✨ Resumen de las funcionalidades implementadas
 
 | Paso | Acción                         | ¿Dónde se implementa?       | Descripción                                                                 |
@@ -50,7 +76,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 | #2   | **Validar entrada vacía**      | `agregarAmigo()`            | Se usa `if` para comprobar si el nombre está vacío y se muestra un `alert`. |
 | #3   | **Agregar al array**           | `agregarAmigo()`            | Se usa `.push()` para añadir el nombre al arreglo `listaDeAmigos`.          |
 | #4   | **Limpiar campo de entrada**   | `agregarAmigo()`            | Se limpia el campo `input` asignando `""` a su `.value`.                    |
-| #5   | **Declarar el array global**   | `app.js`               | Se crea `let listaDeAmigos = []` para almacenar los nombres.                |
+| #5   | **Declarar el array global**   | `app.js`                    | Se crea `let listaDeAmigos = []` para almacenar los nombres.                |
 | #6   | **Obtener lista del HTML**     | `mostrarListaDeAmigos()`    | Se usa `getElementById("listaAmigos")` para acceder a la lista `<ul>`.      |
 | #7   | **Limpiar la lista existente** | `mostrarListaDeAmigos()`    | Se usa `lista.innerHTML = ""` para borrar los elementos actuales.           |
 | #8   | **Iterar sobre el array**      | `mostrarListaDeAmigos()`    | Se recorre `listaDeAmigos` con un bucle `for`.                              |
@@ -78,4 +104,62 @@ cd Challenge-Amigo-Secreto-G9
 npm install
 # 4. Inicia el servidor de desarrollo
 npm run dev
+```
+
+---
+
+## 📁 Estructura del proyecto
+
+```text
+challenge-amigo-secreto_esp-main/
+├── index.html              # Página principal de la aplicación
+├── style.css               # Estilos de la aplicación
+├── app.js                  # Lógica de la aplicación en JavaScript
+├── README.md               # Instrucciones de la aplicación
+└── assets/                 # Carpeta de imágenes
+    ├── amigo-secreto.png
+    ├── play-circle-outline.png new-proyect-vercel.png
+    ├── new-proyect-vercel.png        # Vista previa nuevo proyecto en Vercel
+    ├── oracle-one.png                # Vista previa alura latam
+    ├── alura-latam.png               # Vista previa oracle one
+    └── challenge-amigo-secreto.png   # Vista previa del juego en Readme
+```
+---
+
+🧠 Objetivo del proyecto
+
+Este proyecto fue creado con el objetivo poner en práctica los conocimientos  adquiridos en la 1ra etapa de formación Lógica de Programación con JavaScript, del programa ONE - Oracle Next Education G9.
+Comentado en las principales para su comprensión, puedes modificarlo libremente, ya que está disponible para fines educativos.
+
+---
+
+📝 Notas
+
+Asegúrate de tener todas las imágenes en la carpeta assets/.
+La aplicación es completamente funcional sin necesidad de servidor o dependencias externas.
+Ideal para practicar y aprender lógica de programación y manipulación del DOM JavaScript.
+
+---
+
+✨ Créditos
+
+Desarrollado como ejercicio de Challenge Amigo Secreto, del programa ONE - Oracle Next Education G9.
+
+---
+
+
+<div align="center" style="text-align: center">
+  <img src="challenge-amigo-secreto_esp-main/assets/oracle-alura.png" alt="ONE - Oracle Next Education G9" width="330" height="105"/>  
+  <h3>ONE - Oracle Next Education G9 - 2025</h3>
+  <p>Sumérgete en Tecnología!!</p>  
+  <p>
+    <a href="https://www.oracle.com/latam/education/oracle-next-education/">
+      <img alt="Oracle One" src="challenge-amigo-secreto_esp-main/assets/oracle-one.png" width="130" height="45"/>
+    </a>
+    <a href="https://app.aluracursos.com/dashboard">
+      <img alt="Alura Latam" src="challenge-amigo-secreto_esp-main/assets/alura-latam.png" width="100" height="45"/>
+    </a>
+  </p>
+</div>
+
 

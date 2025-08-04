@@ -2,6 +2,8 @@
 
 //#5 Creamos un arreglo vacío para almacenar los nombres de los amigos ingresados desde el input
 let listaDeAmigos = [];
+//#18 Agregamos array auxiliar para continuar con validaciones
+let listaNoSorteados = []; // Lista para los que faltan por sortear, se eliminarán los ya sorteados.
 
 //Función que se ejecuta al hacer clic en el botón "Añadir" usando el atributo onclick en el index
 function agregarAmigo() {
@@ -30,6 +32,8 @@ function agregarAmigo() {
 
     //#3. Si el nombre es válido, lo agregamos al arreglo usando .push()
     listaDeAmigos.push(nombreAmigo);
+    //#19 también agregamos los nombres a la lista del arreglo auxiliar
+    listaNoSorteados.push(nombreAmigo);
 
     //#4. Limpiar el campo de entrada para que el usuario pueda escribir otro nombre
     input.value = "";
@@ -55,31 +59,63 @@ function mostrarListaDeAmigos() {
         //#9: Creamos un nuevo <li> para cada nombre
         const nuevoItem = document.createElement("li");
         nuevoItem.textContent = nombre;
-
         // Lo agregamos a la lista en el HTML
         listaHTML.appendChild(nuevoItem);
+
+        //# 20 Verificamos si este nombre ya fue sorteado
+        if (!listaNoSorteados.includes(nombre)) {
+            nuevoItem.classList.add("sorteado"); // le aplica estilo tachado con el css
+        }
     }
 }
 
+//agregamos más validaciones con el array auxiliar
 // Función para sortear amigo secreto
 function sortearAmigo() {
-    //#10: Validar que haya al menos un amigo en la lista
-    if (listaDeAmigos.length === 0) {
-        alert("No hay amigos para sortear.");
+    //#10: Validar lista vacía en los dos array
+    if ((listaDeAmigos.length === 0) || (listaNoSorteados.length === 0)) {
+        alert("No hay nombres de amigos para sortear.");
+        document.getElementById("resultado").innerHTML = `<li>Ingrese nombres a lista para Iniciar sorteo!</li>`;
+        return;
+    };
+    //#21 Validar cuando hay 1 nombre en las listas
+    if ((listaDeAmigos.length === 1) || (listaDeAmigos.length === 1)) {
+        alert("Sólo hay 1 nombre en la lista para sortear.");
+        document.getElementById("resultado").innerHTML = `<li>Ingrese más nombres a lista para Iniciar sorteo!</li>`;
+        return;
+    };
+    //#22 Validar cuando hay 2 nombres en las listas
+    if ((listaNoSorteados.length === 2) || (listaDeAmigos.length === 2)) {
+        alert("¡Agregue más nombres a la lista para sortear!");
+        document.getElementById("resultado").innerHTML = `<li>Agregue más nombres o reinicie para volver a sortear</li>`;
         return;
     }
 
-    //11: Generar un índice aleatorio válido
-    // Math.random() genera un número entre 0 y 1 (no incluye el 1)
-    // Multiplicamos por la longitud del array y redondeamos hacia abajo con Math.floor()
-    const indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length);
+    //11: Generar un índice aleatorio válido con el array auxiliar validado
+    // Multiplicamos por la longitud del array aux y redondeamos hacia abajo con Math.floor()
+    const indiceAleatorio = Math.floor(Math.random() * listaNoSorteados.length);
 
-    //#12: Obtener el nombre en esa posición del array
-    const amigoSorteado = listaDeAmigos[indiceAleatorio];
+    //#12: Obtener el nombre en esa posición del array aux.
+    const amigoSorteado = listaNoSorteados[indiceAleatorio];
 
     //#13: Mostrar el resultado en la lista HTML de resultado
     const resultado = document.getElementById("resultado");
-    resultado.innerHTML = `<li>${amigoSorteado} es tu amigo secreto </li>`;
+    resultado.innerHTML = `<li>${amigoSorteado} es tu amigo secreto 🎉</li>`;
+
+    //#23 Eliminamos el nombre sorteado de la lista de No sorteados
+    listaNoSorteados.splice(indiceAleatorio, 1);
+
+    //mostramos la lista de los nombres agregados
+    mostrarListaDeAmigos();
+
+    //#24 Si quedan menos de 3 nombres en la lista, mostramos un mensaje final
+    if ((listaNoSorteados.length === 2) || (listaDeAmigos.length === 2)) {
+        setTimeout(() => {
+            alert("¡Atento sólo quedan dos nombres por sortear!");
+            resultado.innerHTML = `<li>Agregue nombres a la lista para sortear!!!</li>`;
+        }, 500); // breve delay para mostrar el último nombre antes del mensaje final
+    }
+
 }
 
 //14 Función para reiniciar la lista de amigos y limpiar resultados

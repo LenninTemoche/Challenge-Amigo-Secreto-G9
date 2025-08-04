@@ -3,13 +3,17 @@
 
 Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleatorio para elegir al "amigo secreto".  
 
-## [👉 Ver la aplicación en Vercel](https://challenge-amigo-secreto-g9.vercel.app/)
+<h2>
+  <a href="https://challenge-amigo-secreto-g9.vercel.app/" target="_blank" rel="noopener noreferrer">
+    👉 Ver la aplicación en Vercel
+  </a>
+</h2>
 
 <p align="center">
-  <img src="challenge-amigo-secreto_esp-main/assets/challenge-amigo-secreto.png" alt="Vista previa del juego" width="500">
+  <a href="challenge-amigo-secreto_esp-main/assets/challenge-amigo-secreto.png" target="_blank" rel="noopener noreferrer">
+    <img src="challenge-amigo-secreto_esp-main/assets/challenge-amigo-secreto.png" alt="Vista previa del juego" width="500">
+  </a>
 </p>
-
-
 
 ---
 
@@ -27,7 +31,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 ## 🚀 Cómo usar
 
-1. Accede a la [aplicación desplegada](https://challenge-amigo-secreto-g9.vercel.app/)
+1. Accede a la <a href="https://challenge-amigo-secreto-g9.vercel.app/" target="_blank" rel="noopener noreferrer">aplicación desplegada</a>
 2. Ingresa los nombres de todos los participantes
 3. Haz clic en “Realizar sorteo”
 4. Descubre quién es el amigo secreto de cada uno 🎉
@@ -46,7 +50,9 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 ## 👉 Despliegue de la aplicación en Vercel
 
 <p align="center">
-  <img src="challenge-amigo-secreto_esp-main/assets/new-proyect-vercel.png" alt="Vista previa del juego" width="500">
+  <a href="challenge-amigo-secreto_esp-main/assets/new-proyect-vercel.png" target="_blank" rel="noopener noreferrer">
+    <img src="challenge-amigo-secreto_esp-main/assets/new-proyect-vercel.png" alt="Vista previa de Vercel" width="500">
+  </a>
 </p>
 
 ### Pasos para el despliegue en Vercel 
@@ -60,8 +66,20 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 - Vercel construirá y desplegará tu proyecto en una URL única.
 ¡Listo! Tu proyecto estará en vivo y accesible a través de la URL proporcionada por Vercel.
 
-- Si prefieres puedes optar por el despligue en GitHub Pages [Paso a Paso para activar tu proyecto en GitHub Pages](https://www.aluracursos.com/blog/github-pages)
-- Encuentra más información sobre el despliegue en Vercel en [Heroku, Vercel y otras opciones de cloud como plataforma](https://www.aluracursos.com/blog/heroku-vercel-y-otras-opciones-de-cloud-como-plataforma)
+<ul>
+  <li>
+    Si prefieres puedes optar por el despliegue en GitHub Pages:
+    <a href="https://www.aluracursos.com/blog/github-pages" target="_blank" rel="noopener noreferrer">
+      Paso a Paso para activar tu proyecto en GitHub Pages
+    </a>
+  </li>
+  <li>
+    Encuentra más información sobre el despliegue en Vercel en:
+    <a href="https://www.aluracursos.com/blog/heroku-vercel-y-otras-opciones-de-cloud-como-plataforma" target="_blank" rel="noopener noreferrer">
+      Heroku, Vercel y otras opciones de cloud como plataforma
+    </a>
+  </li>
+</ul>
 
 ---
 
@@ -154,22 +172,19 @@ Desarrollado como ejercicio de Challenge Amigo Secreto, del programa ONE - Oracl
 
 ---
 
----
 
 <div align="center" style="text-align: center">
-<img src="challenge-amigo-secreto_esp-main/assets/oracle-alura.png" alt="ONE - Oracle Next Education G9"/>
-<h3>ONE - Oracle Next Education G9</h3>
-<p>
-  Sumérgete en Tecnología!!
-</p>
-<p>
-  <a href="https://www.oracle.com/latam/education/oracle-next-education/">
-    <img alt="Oracle One" src="challenge-amigo-secreto_esp-main/assets/oracle-one.png"
-  ></a>
-  <a href="https://app.aluracursos.com/dashboard">
-     <img alt="Alura Latam" src="challenge-amigo-secreto_esp-main/assets/alura-latam.png"
-  ></a>
-</p>
+  <img src="challenge-amigo-secreto_esp-main/assets/oracle-alura.png" alt="ONE - Oracle Next Education G9" width="330" height="105"/>  
+  <h3>ONE - Oracle Next Education G9</h3>
+  <p>Sumérgete en Tecnología!!</p>  
+  <p>
+    <a href="https://www.oracle.com/latam/education/oracle-next-education/" target="_blank" rel="noopener noreferrer">
+      <img alt="Oracle One" src="challenge-amigo-secreto_esp-main/assets/oracle-one.png" width="130" height="45"/>
+    </a>
+    <a href="https://app.aluracursos.com/dashboard" target="_blank" rel="noopener noreferrer">
+      <img alt="Alura Latam" src="challenge-amigo-secreto_esp-main/assets/alura-latam.png" width="100" height="45"/>
+    </a>
+  </p>
 </div>
----
+
 

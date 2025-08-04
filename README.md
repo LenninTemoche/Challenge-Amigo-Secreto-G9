@@ -13,33 +13,15 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 ---
 
-## ✨ Funcionalidades  (Validaciones en proceso -.-)
+## ✨ Funcionalidades 
 
-- Agregar participantes a una lista
-- Validación para evitar nombres duplicados o vacíos
-- Sorteo aleatorio que asigna a cada participante un "amigo secreto"
-- Interfaz simple, intuitiva y responsiva
+- Agregar participantes a una lista.
+- Validación para evitar nombres duplicados o vacíos.
+- Validación para ingresar sólo texto.
+- Sorteo aleatorio que asigna a cada participante un "amigo secreto".
+- Interfaz simple, intuitiva y responsiva.
 
 ---
-
----
-
-## 📌 Códificación (En proceso):
-
-- .document.getElementById("amigo"): selecciona el campo de texto donde se escribe el nombre.
-
-- .value: obtiene el texto que escribió el usuario.
-
-- .trim(): elimina espacios extra al principio o final del texto.
-
-- .alert("mensaje"): muestra una ventana emergente al usuario.
-
-- .push(): método de los arreglos para agregar un nuevo valor al final.
-
-- .document.createElement("li"): crea un nuevo elemento de lista en el DOM.
-
-- .appendChild(): inserta un nuevo elemento como hijo de otro (en este caso, a la lista).
-
 
 ---
 
@@ -77,7 +59,10 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 | #11  | Generar índice aleatorio       | `sortearAmigo()`            | Se usa `Math.random()` y `Math.floor()` para generar un número válido.      |
 | #12  | Obtener el nombre sorteado     | `sortearAmigo()`            | Se accede al elemento del array en la posición aleatoria.                   |
 | #13  | Mostrar el resultado           | `sortearAmigo()`            | Se actualiza contenido del elemento con ID `resultado` usando `innerHTML`.  |
-
+| #14	 | Reiniciar lista	              | `reiniciarLista()`	        | Limpia array, HTML y resultado.                                             |
+| #15	 | Validar nombres duplicados	    | `agregarAmigo()`	          | Usa .some() para evitar repetidos (ignora mayúsculas).                      |
+| #16	 | Validar solo texto	            | `agregarAmigo()`	          | Usa expresión regular para permitir solo letras.                            |
+| #17	 | Activar tecla Enter            | `addEventListener("keydown")`|	Escucha Enter y ejecuta agregarAmigo().                                   |
 ---
 
 ## 🛠️ Instalación en local 

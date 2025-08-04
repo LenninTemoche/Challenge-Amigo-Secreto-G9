@@ -28,14 +28,14 @@
                 <button class="button-add" onclick="agregarAmigo()">Añadir</button>
             </div>
             <!-- Lista que mostrará los nombres agregados -->
-            <!-- listaamigos será llenada con cada nuevo nombre ingresado-->
+            <!-- lista amigos será llenada con cada nuevo nombre ingresado-->
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
-            <!-- En esta Lista se mostrará el resultado del sorteo (a usar más adelante) -->
+            <!-- En esta Lista se mostrará el resultado del sorteo -->
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container-row">
                 <!-- Botón para sortear amigos -->
-                <!-- En este botón llama a la función sortearAmigo() definida en app.js -->
+                <!-- En este botón se llama a la función sortearAmigo() definida en app.js -->
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
@@ -45,6 +45,13 @@
                 <button class="button-reset" onclick="reiniciarLista()" aria-label="Reiniciar">
                     Reiniciar
                 </button>
+
+                <!--Se agrega Nuevo botón para dirigir a Juego "Correcto"-->
+                <a href="https://sumergete-con-js.vercel.app" target="_blank" rel="noopener noreferrer">                    
+                    <button class="button-extra" aria-label="Más juegos">
+                    Más juegos
+                    </button> 
+                </a>
 
             </div>
         </section>

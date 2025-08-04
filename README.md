@@ -127,6 +127,8 @@ challenge-amigo-secreto_esp-main/
     ├── amigo-secreto.png
     ├── play-circle-outline.png new-proyect-vercel.png
     ├── new-proyect-vercel.png        # Vista previa nuevo proyecto en Vercel
+    ├── oracle-one.png                # Vista previa alura latam
+    ├── alura-latam.png               # Vista previa oracle one
     └── challenge-amigo-secreto.png   # Vista previa del juego en Readme
 ```
 ---
@@ -141,8 +143,8 @@ Está disponible para fines educativos, puedes modificarlo libremente.
 📝 Notas
 
 Asegúrate de tener todas las imágenes en la carpeta assets/.
-El juego es completamente funcional sin necesidad de servidor o dependencias externas.
-Ideal para practicar lógica de programación y manipulación del DOM JavaScript.
+La aplicación es completamente funcional sin necesidad de servidor o dependencias externas.
+Ideal para practicar y aprender lógica de programación y manipulación del DOM JavaScript.
 
 ---
 
@@ -150,5 +152,24 @@ Ideal para practicar lógica de programación y manipulación del DOM JavaScript
 
 Desarrollado como ejercicio de Challenge Amigo Secreto, del programa ONE - Oracle Next Education G9.
 
+---
+
+---
+
+<div align="center" style="text-align: center">
+<img src="challenge-amigo-secreto_esp-main/assets/oracle-alura.png" alt="ONE - Oracle Next Education G9"/>
+<h3>ONE - Oracle Next Education G9</h3>
+<p>
+  Sumérgete en Tecnología!!
+</p>
+<p>
+  <a href="https://www.oracle.com/latam/education/oracle-next-education/">
+    <img alt="Oracle One" src="challenge-amigo-secreto_esp-main/assets/oracle-one.png"
+  ></a>
+  <a href="https://app.aluracursos.com/dashboard">
+     <img alt="Alura Latam" src="challenge-amigo-secreto_esp-main/assets/alura-latam.png"
+  ></a>
+</p>
+</div>
 ---
 

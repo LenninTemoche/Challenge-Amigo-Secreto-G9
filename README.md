@@ -25,9 +25,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 ---
 
----
-
-## 🚀 Cómo usar
+## ✨ Cómo usar
 
 1. Accede a la <a href="https://challenge-amigo-secreto-g9.vercel.app/">aplicación desplegada</a>
 2. Ingresa los nombres de todos los participantes
@@ -45,7 +43,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 ---
 
-## 👉 Despliegue de la aplicación en Vercel
+## 🚀 Despliegue de la aplicación en Vercel
 
 <p align="center">
   <a href="challenge-amigo-secreto_esp-main/assets/new-proyect-vercel.png">
@@ -68,15 +66,6 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 
 ---
-
-## ✨ Funcionalidades 
-
-- Agregar participantes a una lista.
-- Validación para evitar nombres duplicados o vacíos.
-- Validación para ingresar sólo texto.
-- Sorteo aleatorio que asigna a cada participante un "amigo secreto".
-- Interfaz simple, intuitiva y responsiva.
-
 ---
 
 ## ✨ Resumen de las funcionalidades implementadas

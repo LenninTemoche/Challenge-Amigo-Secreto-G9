@@ -241,20 +241,20 @@ ul {
 
 .footer-content h3 {
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 19px;
     color: var(--color-primary);
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .footer-content p {
     font-family: "Inter", sans-serif;
-    font-size: 14px;
-    color: var(--color-text);
-    margin: 5px 0;
+    font-size: 16px;
+    color: var(--color-button-hover);
+    margin: 20px 0;
 }
 
 .footer-links a {
-    margin: 0 7px;
+    margin: 0 12px;
     display: inline-block;
 }
 

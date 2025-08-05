@@ -89,6 +89,36 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 | #15	 | Validar nombres duplicados	    | `agregarAmigo()`	          | Usa .some() para evitar repetidos (ignora mayúsculas).                      |
 | #16	 | Validar solo texto	            | `agregarAmigo()`	          | Usa expresión regular para permitir solo letras.                            |
 | #17	 | Activar tecla Enter            | `addEventListener("keydown")`|	Escucha Enter y ejecuta agregarAmigo().                                   |
+| #18  | **Eliminar nombre sorteado**         | `sortearAmigo()`         | Se usa `.splice()` para quitar el nombre sorteado de `listaNoSorteados`. |
+| #19  | **Actualizar visual tras sorteo**    | `sortearAmigo()`         | Llama nuevamente a `mostrarListaDeAmigos()` para reflejar los cambios.   |
+| #20  | **Alerta por últimos 2 sin sortear** | `sortearAmigo()`         | Usa `setTimeout()` para mostrar advertencia si solo quedan dos nombres.  |
+| #21  | **Agregar lista auxiliar**           | `app.js`                 | Se declara `listaNoSorteados` para gestionar nombres aún no sorteados.   |
+| #22  | **Aplicar clase a sorteados**        | `mostrarListaDeAmigos()` | Agrega clase `sorteado` a `<li>` de amigos que ya fueron sorteados.      |
+| Paso | Acción                                | ¿Dónde se implementa?         | Descripción                                                                 |
+| ---- | ------------------------------------- | ----------------------------- | --------------------------------------------------------------------------- |
+| #1   | **Capturar nombre**                   | `agregarAmigo()`              | Se obtiene el valor del campo de entrada con `getElementById`.              |
+| #2   | **Validar entrada vacía**             | `agregarAmigo()`              | Se usa `if` para comprobar si el nombre está vacío y se muestra un `alert`. |
+| #3   | **Validar duplicados**                | `agregarAmigo()`              | Se utiliza `.some()` ignorando mayúsculas para evitar nombres repetidos.    |
+| #4   | **Validar solo letras**               | `agregarAmigo()`              | Se usa expresión regular para permitir solo letras y espacios.              |
+| #5   | **Agregar al array principal**        | `agregarAmigo()`              | Se usa `.push()` para añadir el nombre a `listaDeAmigos`.                   |
+| #6   | **Agregar al array auxiliar**         | `agregarAmigo()`              | También se añade el nombre a `listaNoSorteados`.                            |
+| #7   | **Limpiar campo de entrada**          | `agregarAmigo()`              | Se limpia el campo `input` asignando `""` a su `.value`.                    |
+| #8   | **Obtener lista del HTML**            | `mostrarListaDeAmigos()`      | Se usa `getElementById("listaAmigos")` para acceder a la lista `<ul>`.      |
+| #9   | **Limpiar la lista existente**        | `mostrarListaDeAmigos()`      | Se usa `lista.innerHTML = ""` para borrar los elementos actuales.           |
+| #10  | **Iterar sobre el array**             | `mostrarListaDeAmigos()`      | Se recorre `listaDeAmigos` con un bucle `for`.                              |
+| #11  | **Agregar elementos `<li>`**          | `mostrarListaDeAmigos()`      | Se crea un `<li>` por cada amigo y se añade con `.appendChild()`.           |
+| #12  | **Estilizar sorteados**               | `mostrarListaDeAmigos()`      | Se agrega la clase `sorteado` si el amigo ya fue sorteado.                  |
+| #13  | **Validar lista vacía**               | `sortearAmigo()`              | Muestra `alert` si la lista está vacía y detiene el sorteo.                 |
+| #14  | **Validar si hay un solo nombre**     | `sortearAmigo()`              | Alerta si solo hay un nombre en la lista.                                   |
+| #15  | **Validar si quedan dos sin sortear** | `sortearAmigo()`              | Muestra `alert` si solo quedan dos nombres en la lista.                     |
+| #16  | **Generar índice aleatorio**          | `sortearAmigo()`              | Se usa `Math.random()` y `Math.floor()` para generar un índice válido.      |
+| #17  | **Obtener el nombre sorteado**        | `sortearAmigo()`              | Se accede al elemento aleatorio de `listaNoSorteados`.                      |
+| #18  | **Mostrar el resultado**              | `sortearAmigo()`              | Se actualiza el elemento `#resultado` con el nombre sorteado.               |
+| #19  | **Eliminar nombre sorteado**          | `sortearAmigo()`              | Se usa `.splice()` para removerlo de `listaNoSorteados`.                    |
+| #20  | **Mostrar alerta final (últimos 2)**  | `sortearAmigo()`              | Usa `setTimeout()` para mostrar una alerta final si solo quedan dos.        |
+| #21  | **Reiniciar arrays y resultados**     | `reiniciarLista()`            | Limpia `listaDeAmigos`, `listaNoSorteados`, el HTML de lista y resultado.   |
+| #22  | **Activar tecla Enter**               | `addEventListener("keydown")` | Escucha la tecla Enter y ejecuta `agregarAmigo()`.                          |
+
 ---
 
 ## 🛠️ Instalación en local 

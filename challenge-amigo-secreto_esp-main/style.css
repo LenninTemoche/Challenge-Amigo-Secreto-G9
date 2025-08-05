@@ -199,24 +199,6 @@ ul {
 }
 
 .button-extra {
-    margin-left: 15px;
-    padding: 20px 20px;
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border: 2px solid #000;
-    border-radius: 20px;    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-    white-space: nowrap;    
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    cursor: pointer;    
-    white-space: nowrap;
-}
-
-.button-extra {
     margin-left: 18px;        
     transition: background-color 0.3s ease;
     background-color: var(--color-tertiary);

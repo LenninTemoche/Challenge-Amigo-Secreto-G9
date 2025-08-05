@@ -224,6 +224,21 @@ ul {
   opacity: 0.7;
 }
 
+.footer-section {
+    background-color: var(--color-secondary);
+    padding: 20px 10px 0;
+    text-align: center;
+    border-top: none;
+    margin-top: 0;
+    width: 100%;
+    clear: both; /* Importante si hay floats anteriores */
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .footer-content h3 {
     font-family: "Inter", sans-serif;
     font-size: 16px;

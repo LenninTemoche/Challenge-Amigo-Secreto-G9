@@ -15,12 +15,15 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 ## ✨ Funcionalidades 
 
-- Agregar participantes a una lista.
-- Validación para evitar nombres duplicados o vacíos.
+- Agregar participantes a una lista, 3 como mínimo para el sorteo.
 - Validación para ingresar sólo texto.
+- Validación para evitar nombres duplicados o vacíos.
+- Validación para 1 o 2 nombres.
 - Se pueden ingresar nombres presionando la tecla Enter.
 - Sorteo aleatorio que asigna a cada participante un "amigo secreto".
+- Al realizar sorteo, el nombre ganador se irá tachando de las lista de nombres ingresados.
 - Opción para Reiniciar una vez seleccionado el "amigo secreto".
+- Se adicona botón para redirigir a página de juego "Correcto".
 - Interfaz simple, intuitiva y responsiva.
 
 ---
@@ -39,6 +42,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 - HTML5
 - JavaScript
 - CSS
+- Github (para versionamiento)
 - Vercel (para el deploy)
 
 ---
@@ -72,15 +76,15 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 | Paso | Acción                         | ¿Dónde se implementa?       | Descripción                                                                 |
 | ---- | ------------------------------ | --------------------------- | --------------------------------------------------------------------------- |
-| #1   | **Capturar nombre**            | `agregarAmigo()`            | Se obtiene el valor del campo de entrada con `getElementById`.              |
-| #2   | **Validar entrada vacía**      | `agregarAmigo()`            | Se usa `if` para comprobar si el nombre está vacío y se muestra un `alert`. |
-| #3   | **Agregar al array**           | `agregarAmigo()`            | Se usa `.push()` para añadir el nombre al arreglo `listaDeAmigos`.          |
-| #4   | **Limpiar campo de entrada**   | `agregarAmigo()`            | Se limpia el campo `input` asignando `""` a su `.value`.                    |
-| #5   | **Declarar el array global**   | `app.js`                    | Se crea `let listaDeAmigos = []` para almacenar los nombres.                |
-| #6   | **Obtener lista del HTML**     | `mostrarListaDeAmigos()`    | Se usa `getElementById("listaAmigos")` para acceder a la lista `<ul>`.      |
-| #7   | **Limpiar la lista existente** | `mostrarListaDeAmigos()`    | Se usa `lista.innerHTML = ""` para borrar los elementos actuales.           |
-| #8   | **Iterar sobre el array**      | `mostrarListaDeAmigos()`    | Se recorre `listaDeAmigos` con un bucle `for`.                              |
-| #9   | **Agregar elementos `<li>`**   | `mostrarListaDeAmigos()`    | Se crea un `<li>` por cada amigo y se añade con `.appendChild()`.           |
+| #1   | Capturar nombre                | `agregarAmigo()`            | Se obtiene el valor del campo de entrada con `getElementById`.              |
+| #2   | Validar entrada vacía          | `agregarAmigo()`            | Se usa `if` para comprobar si el nombre está vacío y se muestra un `alert`. |
+| #3   | Agregar al array               | `agregarAmigo()`            | Se usa `.push()` para añadir el nombre al arreglo `listaDeAmigos`.          |
+| #4   | Limpiar campo de entrada       | `agregarAmigo()`            | Se limpia el campo `input` asignando `""` a su `.value`.                    |
+| #5   | Declarar el array global       | `app.js`                    | Se crea `let listaDeAmigos = []` para almacenar los nombres.                |
+| #6   | Obtener lista del HTML         | `mostrarListaDeAmigos()`    | Se usa `getElementById("listaAmigos")` para acceder a la lista `<ul>`.      |
+| #7   | Limpiar las listas existentes  | `mostrarListaDeAmigos()`    | Se usa `lista.innerHTML = ""` para borrar los elementos de las listas.           |
+| #8   | Iterar sobre el array          | `mostrarListaDeAmigos()`    | Se recorre `listaDeAmigos` con un bucle `for`.                              |
+| #9   | Agregar elementos `<li>`       | `mostrarListaDeAmigos()`    | Se crea un `<li>` por cada amigo y se añade con `.appendChild()`.           |
 | #10  | Validar que haya amigos        | `sortearAmigo()`            | Se verifica que `listaDeAmigos` no esté vacío antes de sortear.             |
 | #11  | Generar índice aleatorio       | `sortearAmigo()`            | Se usa `Math.random()` y `Math.floor()` para generar un número válido.      |
 | #12  | Obtener el nombre sorteado     | `sortearAmigo()`            | Se accede al elemento del array en la posición aleatoria.                   |
@@ -89,11 +93,11 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 | #15	 | Validar nombres duplicados	    | `agregarAmigo()`	          | Usa .some() para evitar repetidos (ignora mayúsculas).                      |
 | #16	 | Validar solo texto	            | `agregarAmigo()`	          | Usa expresión regular para permitir solo letras.                            |
 | #17	 | Activar tecla Enter            | `addEventListener("keydown")`|	Escucha Enter y ejecuta agregarAmigo().                                   |
-| #18  | **Eliminar nombre sorteado**         | `sortearAmigo()`         | Se usa `.splice()` para quitar el nombre sorteado de `listaNoSorteados`. |
-| #19  | **Actualizar visual tras sorteo**    | `sortearAmigo()`         | Llama nuevamente a `mostrarListaDeAmigos()` para reflejar los cambios.   |
-| #20  | **Alerta por últimos 2 sin sortear** | `sortearAmigo()`         | Usa `setTimeout()` para mostrar advertencia si solo quedan dos nombres.  |
-| #21  | **Agregar lista auxiliar**           | `app.js`                 | Se declara `listaNoSorteados` para gestionar nombres aún no sorteados.   |
-| #22  | **Aplicar clase a sorteados**        | `mostrarListaDeAmigos()` | Agrega clase `sorteado` a `<li>` de amigos que ya fueron sorteados.      |
+| #18  | Declarar lista auxiliar        | `app.js`                    | Se declara `listaNoSorteados` para validaciones y gestionar nombres aún no sorteados.      |
+| #19  | Eliminar nombre sorteado de lista aux. | `sortearAmigo()`    | Se usa `.splice()` para quitar el nombre sorteado de `listaNoSorteados`.    |
+| #20  | Actualizar visual tras sorteo    | `sortearAmigo()`          | Llama nuevamente a `mostrarListaDeAmigos()` para reflejar los cambios.      |
+| #21  | Alerta por últimos 2 sin sortear | `sortearAmigo()`          | Usa `setTimeout()` para mostrar advertencia si solo quedan dos nombres.     |
+| #22  | Aplicar clase a sorteados        | `mostrarListaDeAmigos()`  | Usa clase `sorteado` en css a `<li>` de nombres ya sorteados.               |
 | Paso | Acción                                | ¿Dónde se implementa?         | Descripción                                                                 |
 | ---- | ------------------------------------- | ----------------------------- | --------------------------------------------------------------------------- |
 | #1   | **Capturar nombre**                   | `agregarAmigo()`              | Se obtiene el valor del campo de entrada con `getElementById`.              |

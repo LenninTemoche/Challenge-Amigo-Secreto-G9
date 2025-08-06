@@ -19,11 +19,11 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 - Validación para ingresar sólo texto.
 - Validación para evitar nombres duplicados o vacíos.
 - Validación para 1 o 2 nombres.
-- Se pueden ingresar nombres presionando la tecla Enter.
+- Agregar nombres presionando la tecla Enter.
 - Sorteo aleatorio que asigna a cada participante un "amigo secreto".
 - Al realizar sorteo, el nombre ganador se irá tachando de las lista de nombres ingresados.
 - Opción para Reiniciar una vez seleccionado el "amigo secreto".
-- Se adicona botón para redirigir a página de juego "Correcto".
+- Se adiciona botón para redirigir a página de juego "Correcto".
 - Interfaz simple, intuitiva y responsiva.
 
 ---
@@ -72,7 +72,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 ---
 ---
 
-## ✨ Resumen de las funcionalidades implementadas
+## ✨ Resumen de las funcionalidades implementadas en js
 
 | Paso | Acción                         | ¿Dónde se implementa?       | Descripción                                                                 |
 | ---- | ------------------------------ | --------------------------- | --------------------------------------------------------------------------- |
@@ -82,7 +82,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 | #4   | Limpiar campo de entrada       | `agregarAmigo()`            | Se limpia el campo `input` asignando `""` a su `.value`.                    |
 | #5   | Declarar el array global       | `app.js`                    | Se crea `let listaDeAmigos = []` para almacenar los nombres.                |
 | #6   | Obtener lista del HTML         | `mostrarListaDeAmigos()`    | Se usa `getElementById("listaAmigos")` para acceder a la lista `<ul>`.      |
-| #7   | Limpiar las listas existentes  | `mostrarListaDeAmigos()`    | Se usa `lista.innerHTML = ""` para borrar los elementos de las listas.           |
+| #7   | Limpiar las listas existentes  | `mostrarListaDeAmigos()`    | Se usa `lista.innerHTML = ""` para borrar los elementos de las listas.      |
 | #8   | Iterar sobre el array          | `mostrarListaDeAmigos()`    | Se recorre `listaDeAmigos` con un bucle `for`.                              |
 | #9   | Agregar elementos `<li>`       | `mostrarListaDeAmigos()`    | Se crea un `<li>` por cada amigo y se añade con `.appendChild()`.           |
 | #10  | Validar que haya amigos        | `sortearAmigo()`            | Se verifica que `listaDeAmigos` no esté vacío antes de sortear.             |
@@ -93,35 +93,16 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 | #15	 | Validar nombres duplicados	    | `agregarAmigo()`	          | Usa .some() para evitar repetidos (ignora mayúsculas).                      |
 | #16	 | Validar solo texto	            | `agregarAmigo()`	          | Usa expresión regular para permitir solo letras.                            |
 | #17	 | Activar tecla Enter            | `addEventListener("keydown")`|	Escucha Enter y ejecuta agregarAmigo().                                   |
-| #18  | Declarar lista auxiliar        | `app.js`                    | Se declara `listaNoSorteados` para validaciones y gestionar nombres aún no sorteados.      |
-| #19  | Eliminar nombre sorteado de lista aux. | `sortearAmigo()`    | Se usa `.splice()` para quitar el nombre sorteado de `listaNoSorteados`.    |
-| #20  | Actualizar visual tras sorteo    | `sortearAmigo()`          | Llama nuevamente a `mostrarListaDeAmigos()` para reflejar los cambios.      |
-| #21  | Alerta por últimos 2 sin sortear | `sortearAmigo()`          | Usa `setTimeout()` para mostrar advertencia si solo quedan dos nombres.     |
-| #22  | Aplicar clase a sorteados        | `mostrarListaDeAmigos()`  | Usa clase `sorteado` en css a `<li>` de nombres ya sorteados.               |
-| Paso | Acción                                | ¿Dónde se implementa?         | Descripción                                                                 |
-| ---- | ------------------------------------- | ----------------------------- | --------------------------------------------------------------------------- |
-| #1   | **Capturar nombre**                   | `agregarAmigo()`              | Se obtiene el valor del campo de entrada con `getElementById`.              |
-| #2   | **Validar entrada vacía**             | `agregarAmigo()`              | Se usa `if` para comprobar si el nombre está vacío y se muestra un `alert`. |
-| #3   | **Validar duplicados**                | `agregarAmigo()`              | Se utiliza `.some()` ignorando mayúsculas para evitar nombres repetidos.    |
-| #4   | **Validar solo letras**               | `agregarAmigo()`              | Se usa expresión regular para permitir solo letras y espacios.              |
-| #5   | **Agregar al array principal**        | `agregarAmigo()`              | Se usa `.push()` para añadir el nombre a `listaDeAmigos`.                   |
-| #6   | **Agregar al array auxiliar**         | `agregarAmigo()`              | También se añade el nombre a `listaNoSorteados`.                            |
-| #7   | **Limpiar campo de entrada**          | `agregarAmigo()`              | Se limpia el campo `input` asignando `""` a su `.value`.                    |
-| #8   | **Obtener lista del HTML**            | `mostrarListaDeAmigos()`      | Se usa `getElementById("listaAmigos")` para acceder a la lista `<ul>`.      |
-| #9   | **Limpiar la lista existente**        | `mostrarListaDeAmigos()`      | Se usa `lista.innerHTML = ""` para borrar los elementos actuales.           |
-| #10  | **Iterar sobre el array**             | `mostrarListaDeAmigos()`      | Se recorre `listaDeAmigos` con un bucle `for`.                              |
-| #11  | **Agregar elementos `<li>`**          | `mostrarListaDeAmigos()`      | Se crea un `<li>` por cada amigo y se añade con `.appendChild()`.           |
-| #12  | **Estilizar sorteados**               | `mostrarListaDeAmigos()`      | Se agrega la clase `sorteado` si el amigo ya fue sorteado.                  |
-| #13  | **Validar lista vacía**               | `sortearAmigo()`              | Muestra `alert` si la lista está vacía y detiene el sorteo.                 |
-| #14  | **Validar si hay un solo nombre**     | `sortearAmigo()`              | Alerta si solo hay un nombre en la lista.                                   |
-| #15  | **Validar si quedan dos sin sortear** | `sortearAmigo()`              | Muestra `alert` si solo quedan dos nombres en la lista.                     |
-| #16  | **Generar índice aleatorio**          | `sortearAmigo()`              | Se usa `Math.random()` y `Math.floor()` para generar un índice válido.      |
-| #17  | **Obtener el nombre sorteado**        | `sortearAmigo()`              | Se accede al elemento aleatorio de `listaNoSorteados`.                      |
-| #18  | **Mostrar el resultado**              | `sortearAmigo()`              | Se actualiza el elemento `#resultado` con el nombre sorteado.               |
-| #19  | **Eliminar nombre sorteado**          | `sortearAmigo()`              | Se usa `.splice()` para removerlo de `listaNoSorteados`.                    |
-| #20  | **Mostrar alerta final (últimos 2)**  | `sortearAmigo()`              | Usa `setTimeout()` para mostrar una alerta final si solo quedan dos.        |
-| #21  | **Reiniciar arrays y resultados**     | `reiniciarLista()`            | Limpia `listaDeAmigos`, `listaNoSorteados`, el HTML de lista y resultado.   |
-| #22  | **Activar tecla Enter**               | `addEventListener("keydown")` | Escucha la tecla Enter y ejecuta `agregarAmigo()`.                          |
+| #18  | Declarar lista auxiliar        | `app.js`                    | Se declara `listaNoSorteados` para validaciones y gestionar nombres aún no sorteados.|
+| #19  | Agregar lista al array aux.    | `agregarAmigo()`            | Se usa `.push()` para añadir el nombre al arreglo `listaNoSorteados`.       |
+| #20  | Verificar si el nombre ya fue sorteado | `mostrarListaDeAmigos()` | Usa clase `sorteado` en css a `<li>` tachando los nombres ya sorteados.|
+| #21  | Validar si hay un solo nombre  | `sortearAmigo()`            | Muestra `alert` si solo hay un nombre en la lista.                          |
+| #22  | Validar si hay dos nombres     | `sortearAmigo()`            | Muestra `alert` si solo quedan dos nombres en la lista.                     |
+| #23  | Eliminar nombre sorteado de lista aux.| `sortearAmigo()`     | Se usa `.splice()` para removerlo de `listaNoSorteados`.                    |
+| #24  | Verificar si quedan menos de 3 nombres| `sortearAmigo()`     | Muestra `alert` si solo quedan dos nombres en la lista.                     |
+
+
+
 
 ---
 
@@ -152,7 +133,7 @@ challenge-amigo-secreto_esp-main/
 ├── README.md               # Instrucciones de la aplicación
 └── assets/                 # Carpeta de imágenes
     ├── amigo-secreto.png
-    ├── play-circle-outline.png new-proyect-vercel.png
+    ├── play-circle-outline.png
     ├── new-proyect-vercel.png        # Vista previa nuevo proyecto en Vercel
     ├── oracle-one.png                # Vista previa alura latam
     ├── alura-latam.png               # Vista previa oracle one
@@ -162,8 +143,7 @@ challenge-amigo-secreto_esp-main/
 
 🧠 Objetivo del proyecto
 
-Este proyecto fue creado con el objetivo poner en práctica los conocimientos  adquiridos en la 1ra etapa de formación Lógica de Programación con JavaScript, del programa ONE - Oracle Next Education G9.
-Comentado en las principales para su comprensión, puedes modificarlo libremente, ya que está disponible para fines educativos.
+Proyecto creado con el objetivo poner en práctica los conocimientos  adquiridos en la 1ra etapa de formación Lógica de Programación con JavaScript, del programa ONE - Oracle Next Education G9. Comentado en las partes principales para su comprensión, puedes modificarlo libremente, ya que está disponible para fines educativos.
 
 ---
 
@@ -177,21 +157,20 @@ Ideal para practicar y aprender lógica de programación y manipulación del DOM
 
 ✨ Créditos
 
-Desarrollado como ejercicio de Challenge Amigo Secreto, del programa ONE - Oracle Next Education G9.
-
----
-
+Desarrollado como ejercicio del Challenge Amigo Secreto, del programa ONE - Oracle Next Education G9.
+<br>
+<br>
 
 <div align="center" style="text-align: center">
-  <img src="challenge-amigo-secreto_esp-main/assets/oracle-alura.png" alt="ONE - Oracle Next Education G9" width="330" height="105"/>  
+  <img src="challenge-amigo-secreto_esp-main/assets/oracle-alura.png" alt="ONE - Oracle Next Education G9" width="500" height="125"/>  
   <h3>ONE - Oracle Next Education G9 - 2025</h3>
   <p>Sumérgete en Tecnología!!</p>  
   <p>
     <a href="https://www.oracle.com/latam/education/oracle-next-education/">
-      <img alt="Oracle One" src="challenge-amigo-secreto_esp-main/assets/oracle-one.png" width="130" height="45"/>
+      <img alt="Oracle One" src="challenge-amigo-secreto_esp-main/assets/oracle-one.png" width="140" height="55"/>
     </a>
     <a href="https://app.aluracursos.com/dashboard">
-      <img alt="Alura Latam" src="challenge-amigo-secreto_esp-main/assets/alura-latam.png" width="100" height="45"/>
+      <img alt="Alura Latam" src="challenge-amigo-secreto_esp-main/assets/alura-latam.png" width="120" height="55"/>
     </a>
   </p>
 </div>

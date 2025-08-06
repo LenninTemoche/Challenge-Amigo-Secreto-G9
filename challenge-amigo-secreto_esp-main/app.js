@@ -39,6 +39,7 @@ function agregarAmigo() {
     input.value = "";
 
     // Llamamos a la función que muestra los amigos en la lista HTML - separamos un poco  la lógica
+    //mostrará la lista de nombres ingresados
     mostrarListaDeAmigos();
     
 }
@@ -62,7 +63,7 @@ function mostrarListaDeAmigos() {
         // Lo agregamos a la lista en el HTML
         listaHTML.appendChild(nuevoItem);
 
-        //# 20 Verificamos si este nombre ya fue sorteado
+        //#20 Verificamos si este nombre ya fue sorteado
         if (!listaNoSorteados.includes(nombre)) {
             nuevoItem.classList.add("sorteado"); // le aplica estilo tachado con el css
         }

@@ -44,7 +44,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 - CSS
 - Github (para versionamiento)
 - Vercel (para el deploy)
-
+- Trello (para gestión y planificación)
 ---
 
 ## 🚀 Despliegue de la aplicación en Vercel
@@ -87,12 +87,12 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 | #9   | Agregar elementos `<li>`       | `mostrarListaDeAmigos()`    | Se crea un `<li>` por cada amigo y se añade con `.appendChild()`.           |
 | #10  | Validar que haya amigos        | `sortearAmigo()`            | Se verifica que `listaDeAmigos` no esté vacío antes de sortear.             |
 | #11  | Generar índice aleatorio       | `sortearAmigo()`            | Se usa `Math.random()` y `Math.floor()` para generar un número válido.      |
-| #12  | Obtener el nombre sorteado     | `sortearAmigo()`            | Se accede al elemento del array en la posición aleatoria.                   |
+| #12  | Obtener el nombre sorteado     | `sortearAmigo()`            | Se accede al elemento del array en la posición aleatoria listaNoSorteados[indiceAleatorio].
 | #13  | Mostrar el resultado           | `sortearAmigo()`            | Se actualiza contenido del elemento con ID `resultado` usando `innerHTML`.  |
 | #14	 | Reiniciar lista	              | `reiniciarLista()`	        | Limpia array, HTML y resultado.                                             |
-| #15	 | Validar nombres duplicados	    | `agregarAmigo()`	          | Usa .some() para evitar repetidos (ignora mayúsculas).                      |
-| #16	 | Validar solo texto	            | `agregarAmigo()`	          | Usa expresión regular para permitir solo letras.                            |
-| #17	 | Activar tecla Enter            | `addEventListener("keydown")`|	Escucha Enter y ejecuta agregarAmigo().                                   |
+| #15	 | Validar nombres duplicados	    | `agregarAmigo()`	          | Usa .some() para evitar repetidos (ignora mayúsculas) listaDeAmigos.some(amigo => amigo.toLowerCase().|
+| #16	 | Validar solo texto	            | `agregarAmigo()`	          | Usa expresión regular para permitir solo texto soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.|
+| #17	 | Activar tecla Enter            | `app.js`                    |	Escucha Enter y ejecuta agregarAmigo(). addEventListener("keydown")         |
 | #18  | Declarar lista auxiliar        | `app.js`                    | Se declara `listaNoSorteados` para validaciones y gestionar nombres aún no sorteados.|
 | #19  | Agregar lista al array aux.    | `agregarAmigo()`            | Se usa `.push()` para añadir el nombre al arreglo `listaNoSorteados`.       |
 | #20  | Verificar si el nombre ya fue sorteado | `mostrarListaDeAmigos()` | Usa clase `sorteado` en css a `<li>` tachando los nombres ya sorteados.|
@@ -132,8 +132,8 @@ challenge-amigo-secreto_esp-main/
 ├── app.js                  # Lógica de la aplicación en JavaScript
 ├── README.md               # Instrucciones de la aplicación
 └── assets/                 # Carpeta de imágenes
-    ├── amigo-secreto.png
-    ├── play-circle-outline.png
+    ├── amigo-secreto.png   # imágen central
+    ├── play-circle-outline.png       # icono botón sorteo
     ├── new-proyect-vercel.png        # Vista previa nuevo proyecto en Vercel
     ├── oracle-one.png                # Vista previa alura latam
     ├── alura-latam.png               # Vista previa oracle one
@@ -143,14 +143,13 @@ challenge-amigo-secreto_esp-main/
 
 🧠 Objetivo del proyecto
 
-Proyecto creado con el objetivo poner en práctica los conocimientos  adquiridos en la 1ra etapa de formación Lógica de Programación con JavaScript, del programa ONE - Oracle Next Education G9. Comentado en las partes principales para su comprensión, puedes modificarlo libremente, ya que está disponible para fines educativos.
+Proyecto creado con el objetivo poner en práctica los conocimientos  adquiridos en la 1ra etapa de formación Lógica de Programación con JavaScript, del Programa ONE - Oracle Next Education G9. Comentado en las partes principales para su comprensión, puedes usarlo y modificarlo libremente, ya que está disponible para fines educativos.
 
 ---
 
 📝 Notas
 
-Asegúrate de tener todas las imágenes en la carpeta assets/.
-La aplicación es completamente funcional sin necesidad de servidor o dependencias externas.
+Asegúrate de tener todas las imágenes en la carpeta assets/. La aplicación es completamente funcional sin necesidad de servidor o dependencias externas.
 Ideal para practicar y aprender lógica de programación y manipulación del DOM JavaScript.
 
 ---

@@ -43,6 +43,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 - JavaScript
 - CSS
 - Github (para versionamiento)
+- Github Codespaces (ambiente de desarrollo)
 - Vercel (para el deploy)
 - Trello (para gestión y planificación)
 ---

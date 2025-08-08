@@ -76,13 +76,13 @@ function sortearAmigo() {
     //#10: Validar lista vacía en los dos array
     if ((listaDeAmigos.length === 0) || (listaNoSorteados.length === 0)) {
         alert("No hay nombres de amigos para sortear.");
-        document.getElementById("resultado").innerHTML = `<li>Ingrese nombres a lista para Iniciar sorteo!</li>`;
+        document.getElementById("resultado").innerHTML = `<li>Ingrese nombres a la lista para Iniciar sorteo!</li>`;
         return;
     };
     //#21 Validar cuando hay 1 nombre en las listas
     if ((listaDeAmigos.length === 1) || (listaNoSorteados.length === 1)) {
         alert("Sólo hay 1 nombre en la lista para sortear.");
-        document.getElementById("resultado").innerHTML = `<li>Ingrese más nombres a lista para Iniciar sorteo!</li>`;
+        document.getElementById("resultado").innerHTML = `<li>Ingrese más nombres a la lista para Iniciar sorteo!</li>`;
         return;
     };
     //#22 Validar cuando hay 2 nombres en las listas
@@ -127,9 +127,9 @@ function reiniciarLista() {
 
     // Limpiar la lista visual en el HTML
     document.getElementById("listaAmigos").innerHTML = "";
-
     // Limpiar el resultado del sorteo si existe
     document.getElementById("resultado").innerHTML = "";
+    document.getElementById("resultado").innerHTML = `<li>Agregue nombres a la lista para nuevo sorteo!</li>`;
 }
 
 //#17 Detectar si se presiona Enter en el campo de entrada

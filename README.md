@@ -45,7 +45,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 - Github (para versionamiento)
 - Github Codespaces (ambiente de desarrollo)
 - Vercel (para el deploy)
-- Trello (para gestión y planificación)
+- Trello (para gestión y planificación) [ver mi Trello](https://trello.com/b/0ngpC5e2/trello-challenge-amigo-secreto-esp)
 ---
 
 ## 🚀 Despliegue de la aplicación en Vercel

@@ -37,6 +37,8 @@ function agregarAmigo() {
 
     //#4. Limpiar el campo de entrada para que el usuario pueda escribir otro nombre
     input.value = "";
+    //Limpiamos mensaje de resultados en gral.
+    document.getElementById("resultado").innerHTML = `<li>...</li>`;
 
     // Llamamos a la función que muestra los amigos en la lista HTML - separamos un poco  la lógica
     //mostrará la lista de nombres ingresados
@@ -121,15 +123,23 @@ function sortearAmigo() {
 
 //14 Función para reiniciar la lista de amigos y limpiar resultados
 function reiniciarLista() {
-    // Vaciar los arrays
+    // Verificar si las listas tienen elementos antes de vaciarlas, para poder mostrar mensajes
+    const listaConNombres = (listaDeAmigos.length > 0 || listaNoSorteados.length > 0);
+
+    // Vaciar las listas
     listaDeAmigos = [];
     listaNoSorteados = [];
 
-    // Limpiar la lista visual en el HTML
+    // Limpiar el contenido visual del HTML
     document.getElementById("listaAmigos").innerHTML = "";
-    // Limpiar el resultado del sorteo si existe
     document.getElementById("resultado").innerHTML = "";
-    document.getElementById("resultado").innerHTML = `<li>Agregue nombres a la lista para nuevo sorteo!</li>`;
+
+    // Mostrar el mensaje al reiniciar o con lista vacía
+    if (listaConNombres) {
+        document.getElementById("resultado").innerHTML = `<li>Juego reiniciado, ingrese nombres para nuevo sorteo!</li>`;
+    } else {
+        document.getElementById("resultado").innerHTML = `<li>Lista vacía, por favor agregue nombres.</li>`;
+    }
 }
 
 //#17 Detectar si se presiona Enter en el campo de entrada

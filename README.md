@@ -144,14 +144,14 @@ challenge-amigo-secreto_esp-main/
 
 🧠 Objetivo del proyecto
 
-Proyecto creado con el objetivo poner en práctica los conocimientos  adquiridos en la 1ra etapa de formación Lógica de Programación con JavaScript, del Programa ONE - Oracle Next Education G9. Comentado en las partes principales para su comprensión, puedes usarlo y modificarlo libremente, ya que está disponible para fines educativos.
+Proyecto creado con el objetivo de poner en práctica los conocimientos  adquiridos en la 1ra etapa de formación Lógica de Programación con JavaScript, del Programa ONE - Oracle Next Education G9. Comentado en las partes principales para su comprensión, puedes usarlo y modificarlo libremente, ya que está disponible para fines educativos.
 
 ---
 
 📝 Notas
 
-Asegúrate de tener todas las imágenes en la carpeta assets/. La aplicación es completamente funcional sin necesidad de servidor o dependencias externas.
-Ideal para practicar y aprender lógica de programación y manipulación del DOM JavaScript.
+Si la ejecutas en local, asegúrate de que todas las imágenes estén en la carpeta assets/, tan sólo necesitarás conexión a internet para cargar las fuentes desde Google Fonts.
+La aplicación es completamente funcional, ideal para practicar y aprender lógica de programación y manipulación del DOM con JavaScript.
 
 ---
 

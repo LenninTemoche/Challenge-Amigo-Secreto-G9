@@ -103,7 +103,7 @@ function sortearAmigo() {
 
     //#13: Mostrar el resultado en la lista HTML de resultado
     const resultado = document.getElementById("resultado");
-    resultado.innerHTML = `<li>${amigoSorteado} es tu amigo secreto 🎉</li>`;
+    resultado.innerHTML = `<li>${amigoSorteado} es tu amigo secreto 🎉</li>`;    
 
     //#23 Eliminamos el nombre sorteado de la lista de No sorteados
     listaNoSorteados.splice(indiceAleatorio, 1);

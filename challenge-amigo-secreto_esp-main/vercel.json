@@ -1,0 +1,42 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "_comment": "Define el esquema para validación",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "_comment": "Aplica estas cabeceras a todos los archivos y rutas del sitio",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'self';",
+          "_comment": "permite el uso de fuentes y estilos utilizados"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff",
+          "_comment": "Previene interpretación errónea del tipo MIME"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY",
+          "_comment": "Bloquea que tu sitio se muestre dentro de un iframe, protege de clickjacking"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer",
+          "_comment": "Controla la información de referencia enviada al navegar desde tu sitio"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()",
+          "_comment": "Desactiva APIs del navegador no necesarias (cámara, micrófono, etc.)"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload",
+          "_comment": "Obliga al navegador a usar HTTPS"
+        }
+      ]
+    }
+  ]
+}

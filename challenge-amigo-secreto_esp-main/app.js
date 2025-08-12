@@ -148,3 +148,10 @@ document.getElementById("amigo").addEventListener("keydown", function(event) {
         agregarAmigo(); // Ejecuta la misma función del botón
     }
 });
+
+//#25 Asegurar los botones en el DOM para cumplir con capa de seguridad en vercel.json: (script-src 'self')
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("botonAgregar").addEventListener("click", agregarAmigo);
+    document.getElementById("botonSortear").addEventListener("click", sortearAmigo);
+    document.getElementById("botonReiniciar").addEventListener("click", reiniciarLista);
+});

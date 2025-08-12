@@ -25,7 +25,8 @@
                 <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre" autocomplete="off">
                 <!-- Botón para añadir nombre -->
                 <!--El botón llama a la función agregarAmigo() definida en app.js -->
-                <button class="button-add" onclick="agregarAmigo()">Añadir</button>
+                <!--<button class="button-add" onclick="agregarAmigo()">Añadir</button>#25.1 en js-->
+                <button class="button-add" id="botonAgregar">Añadir</button>
             </div>
             <!-- Lista que mostrará los nombres agregados -->
             <!-- lista amigos será llenada con cada nuevo nombre ingresado-->
@@ -36,13 +37,15 @@
             <div class="button-container-row">
                 <!-- Botón para sortear amigos -->
                 <!-- En este botón se llama a la función sortearAmigo() definida en app.js -->
-                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                <!--<button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">#25.2 en js-->
+                <button class="button-draw" id="botonSortear" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
                 </button>
                 <!-- Botón para reiniciar la lista de amigos y el resultado -->
                 <!-- Llama a la función reiniciarLista() definida en app.js -->
-                <button class="button-reset" onclick="reiniciarLista()" aria-label="Reiniciar">
+                <!--<button class="button-reset" onclick="reiniciarLista()" aria-label="Reiniciar">#25.3-->
+                <button class="button-reset" id="botonReiniciar" aria-label="Reiniciar">
                     Reiniciar
                 </button>
                 <!--Se agrega Nuevo botón para dirigir a Juego "Correcto"-->

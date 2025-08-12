@@ -82,16 +82,23 @@ function mostrarListaDeAmigos() {
 //agregamos más validaciones con el array auxiliar
 // Función para sortear amigo secreto
 function sortearAmigo() {
+    //Eliminaremos los innerHTML para hacerlo mas seguro
+    const resultado = document.getElementById("resultado");
+    resultado.replaceChildren(); // Limpiar de forma segura
     //#10: Validar lista vacía en los dos array
     if ((listaDeAmigos.length === 0) || (listaNoSorteados.length === 0)) {
         alert("No hay nombres de amigos para sortear.");
-        document.getElementById("resultado").innerHTML = `<li>Ingrese nombres a la lista para Iniciar sorteo!</li>`;
+        const mensaje = document.createElement("li");
+        mensaje.textContent = "Ingrese nombres a la lista para Iniciar sorteo!";
+        resultado.appendChild(mensaje);
         return;
     };
     //#21 Validar cuando hay 1 nombre en las listas
     if ((listaDeAmigos.length === 1) || (listaNoSorteados.length === 1)) {
         alert("Sólo hay 1 nombre en la lista para sortear.");
-        document.getElementById("resultado").innerHTML = `<li>Ingrese más nombres a la lista para Iniciar sorteo!</li>`;
+        const mensaje = document.createElement("li");
+        mensaje.textContent = "Ingrese más nombres a la lista para Iniciar sorteo!";
+        resultado.appendChild(mensaje);
         return;
     };
     //#22 Validar cuando hay 2 nombres en las listas
@@ -109,7 +116,7 @@ function sortearAmigo() {
     const amigoSorteado = listaNoSorteados[indiceAleatorio];
 
     //#13: Mostrar el resultado en la lista HTML de resultado
-    const resultado = document.getElementById("resultado");
+    //const resultado = document.getElementById("resultado");
     resultado.innerHTML = `<li>${amigoSorteado} es tu amigo secreto 🎉</li>`;    
 
     //#23 Eliminamos el nombre sorteado de la lista de No sorteados

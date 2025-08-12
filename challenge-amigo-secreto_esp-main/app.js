@@ -24,7 +24,7 @@ function agregarAmigo() {
         return;
     }
     //#16 Validar que el nombre contenga solo letras
-    const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+    const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;    
     if (!soloLetras.test(nombreAmigo)) {
         alert("Por favor, ingrese solo texto.");
         return;

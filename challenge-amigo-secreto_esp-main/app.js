@@ -104,7 +104,9 @@ function sortearAmigo() {
     //#22 Validar cuando hay 2 nombres en las listas
     if ((listaDeAmigos.length === 2) || (listaNoSorteados.length === 2)) {
         alert("¡Agregue más nombres a la lista para sortear!");
-        document.getElementById("resultado").innerHTML = `<li>Agregue más nombres o reinicie para volver a sortear</li>`;
+        const mensaje = document.createElement("li");
+        mensaje.textContent = "Agregue más nombres o reinicie para volver a sortear";
+        resultado.appendChild(mensaje);
         return;
     }
 

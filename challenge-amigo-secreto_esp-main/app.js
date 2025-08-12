@@ -37,8 +37,13 @@ function agregarAmigo() {
 
     //#4. Limpiar el campo de entrada para que el usuario pueda escribir otro nombre
     input.value = "";
-    //Limpiamos mensaje de resultados en gral.
-    document.getElementById("resultado").innerHTML = `<li>...</li>`;
+    //Limpiamos mensaje de resultados de forma segura 
+    const resultado = document.getElementById("resultado");
+    resultado.replaceChildren();  // elimina todos los hijos <li>
+    //y mostramos un mensaje neutro ...
+    const mensaje = document.createElement("li");
+    mensaje.textContent = ".....";
+    resultado.appendChild(mensaje);
 
     // Llamamos a la función que muestra los amigos en la lista HTML - separamos un poco  la lógica
     //mostrará la lista de nombres ingresados

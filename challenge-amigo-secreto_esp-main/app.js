@@ -132,16 +132,24 @@ function reiniciarLista() {
     listaDeAmigos = [];
     listaNoSorteados = [];
 
-    // Limpiar el contenido visual del HTML
-    document.getElementById("listaAmigos").innerHTML = "";
-    document.getElementById("resultado").innerHTML = "";
+    // Limpiar el contenido visual del HTML de forma segura- reemplazamos los innerHTML
+    //document.getElementById("listaAmigos").innerHTML = "";
+    //document.getElementById("resultado").innerHTML = "";
+    const listaAmigosHTML = document.getElementById("listaAmigos");
+    const resultadoHTML = document.getElementById("resultado");
+    //Limpiar la lista de manera más segura
+    listaAmigosHTML.replaceChildren();    
+    resultadoHTML.replaceChildren();
 
-    // Mostrar el mensaje al reiniciar o con lista vacía
+    // Mostrar el mensaje seguro, al reiniciar o con lista vacía
+    const mensaje = document.createElement("li");
+
     if (listaConNombres) {
-        document.getElementById("resultado").innerHTML = `<li>Juego reiniciado, ingrese nombres para nuevo sorteo!</li>`;
+        mensaje.textContent = "Juego reiniciado, ingrese nombres para nuevo sorteo!";
     } else {
-        document.getElementById("resultado").innerHTML = `<li>Lista vacía, por favor agregue nombres.</li>`;
+        mensaje.textContent = "Lista vacía, por favor agregue nombres.";
     }
+    resultadoHTML.appendChild(mensaje);
 }
 
 //#17 Detectar si se presiona Enter en el campo de entrada

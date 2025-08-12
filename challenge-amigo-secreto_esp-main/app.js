@@ -53,7 +53,9 @@ function mostrarListaDeAmigos() {
     const listaHTML = document.getElementById("listaAmigos");
 
     //#7: Limpiamos la lista existente para evitar duplicados
-    listaHTML.innerHTML = "";
+    //listaHTML.innerHTML = "";
+    //Limpiamos la lista de manera más segura
+    listaHTML.replaceChildren();
 
     //#8: Recorremos el array de amigos usando un bucle for
     for (let i = 0; i < listaDeAmigos.length; i++) {

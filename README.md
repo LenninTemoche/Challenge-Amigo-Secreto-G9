@@ -103,6 +103,20 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 | #24  | Verificar si quedan menos de 3 nombres| `sortearAmigo()`     | Muestra `alert` si solo quedan dos nombres en la lista.                     |
 
 
+---
+### 🔐 Seguridad: Configuración en vercel.json
+
+  Para mejorar la seguridad de esta aplicación desplegada en Vercel, se ha incluido un archivo vercel.json con una configuración personalizada de headers HTTP, las cuales ayudan a proteger contra ataques comunes como XSS,   clickjacking, sniffing de contenido y segurando que toda la navegación ocurra sobre HTTPS. Para más información consulte la [documentación oficial de Vercel](https://vercel.com/docs/project-configuration).
+
+| **Cabecera**                          | **Valor aplicado**                                                                                                                                                                    | **Propósito**                                                            |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `Content-Security-Policy`             | `default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'self';` | Previene XSS e impone políticas de carga de recursos                     |
+| `X-Content-Type-Options`              | `nosniff`                                                                                                                                                                             | Impide que el navegador adivine el tipo de contenido                     |
+| `X-Frame-Options`                     | `DENY`                                                                                                                                                                                | Evita que la app se incruste en iframes (protección contra clickjacking) |
+| `Referrer-Policy`                     | `no-referrer`                                                                                                                                                                         | Controla la información enviada en el encabezado `Referer`               |
+| `X-XSS-Protection`                    | `1; mode=block`                                                                                                                                                                       | Activa protección contra XSS en navegadores antiguos                     |
+| `Permissions-Policy`                  | `camera=(), microphone=(), geolocation=()`                                                                                                                                            | Bloquea acceso a APIs sensibles del navegador                            |
+| `Strict-Transport-Security`           | `max-age=63072000; includeSubDomains; preload`                                                                                                                                        | Fuerza el uso de HTTPS en todas las conexiones                           |
 
 
 ---
@@ -131,6 +145,7 @@ challenge-amigo-secreto_esp-main/
 ├── index.html              # Página principal de la aplicación
 ├── style.css               # Estilos de la aplicación
 ├── app.js                  # Lógica de la aplicación en JavaScript
+├── vercel.json             # Configuración de seguridad
 ├── README.md               # Instrucciones de la aplicación
 └── assets/                 # Carpeta de imágenes
     ├── amigo-secreto.png   # imágen central
@@ -138,6 +153,7 @@ challenge-amigo-secreto_esp-main/
     ├── new-proyect-vercel.png        # Vista previa nuevo proyecto en Vercel
     ├── oracle-one.png                # Vista previa alura latam
     ├── alura-latam.png               # Vista previa oracle one
+    ├── gatito-github.png             # Vista previa github
     └── challenge-amigo-secreto.png   # Vista previa del juego en Readme
 ```
 ---

@@ -118,8 +118,9 @@ function sortearAmigo() {
     const amigoSorteado = listaNoSorteados[indiceAleatorio];
 
     //#13: Mostrar el resultado en la lista HTML de resultado
-    //const resultado = document.getElementById("resultado");
-    resultado.innerHTML = `<li>${amigoSorteado} es tu amigo secreto 🎉</li>`;    
+    const mensaje = document.createElement("li");
+    mensaje.textContent = `${amigoSorteado} es tu amigo secreto 🎉`;
+    resultado.appendChild(mensaje);    
 
     //#23 Eliminamos el nombre sorteado de la lista de No sorteados
     listaNoSorteados.splice(indiceAleatorio, 1);
@@ -130,8 +131,12 @@ function sortearAmigo() {
     //#24 Si quedan menos de 3 nombres en la lista, mostramos un mensaje final
     if ((listaNoSorteados.length === 2) || (listaDeAmigos.length === 2)) {
         setTimeout(() => {
-            alert("¡Atento sólo quedan dos nombres por sortear!");
-            resultado.innerHTML = `<li>Agregue nombres a la lista para sortear!!!</li>`;
+            alert("¡Atento sólo quedan 2 nombres por sortear!");
+            // Limpiar y mostrar mensaje adicional
+            resultado.replaceChildren();
+            const advertencia = document.createElement("li");
+            advertencia.textContent = "Agregue más nombres a la lista para sortear!!!";
+            resultado.appendChild(advertencia);
         }, 500); // breve delay para mostrar el último nombre antes del mensaje final
     }
 

@@ -178,7 +178,7 @@ document.getElementById("amigo").addEventListener("keydown", function(event) {
     }
 });
 
-//#25 Asegurar los botones en el DOM para cumplir con capa de seguridad en vercel.json: (script-src 'self')
+//#25 Asegurar los botones en el DOM para cumplir con capa de seguridad CSP en vercel.json)
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("botonAgregar").addEventListener("click", agregarAmigo);
     document.getElementById("botonSortear").addEventListener("click", sortearAmigo);

@@ -13,7 +13,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 ---
 
-## ✨ Funcionalidades 
+## ✨ Funcionalidades: 
 
 - Agregar participantes a una lista, 3 como mínimo para el sorteo.
 - Validación para ingresar sólo texto.
@@ -29,7 +29,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 ---
 
-## ✨ Cómo usar
+## ✨ Como usar:
 
 1. Accede a la <a href="https://challenge-amigo-secreto-g9.vercel.app/">aplicación desplegada</a>
 2. Ingresa los nombres de todos los participantes
@@ -38,18 +38,18 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 🛠️ Tecnologías utilizadas:
 
 - HTML5
 - JavaScript
 - CSS
-- Github (para versionamiento)
+- GitHub (para versionamiento)
 - Github Codespaces (ambiente de desarrollo)
-- Vercel (para el deploy)
+- Vercel (para el despliegue)
 - Trello (para gestión y planificación) [ver mi Trello](https://trello.com/b/0ngpC5e2/trello-challenge-amigo-secreto-esp)
 ---
 
-## 🚀 Despliegue de la aplicación en Vercel
+## 🚀 Despliegue de la aplicación en Vercel:
 
 <p align="center">
   <a href="challenge-amigo-secreto_esp-main/assets/new-proyect-vercel.png">
@@ -74,7 +74,7 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 ---
 ---
 
-## ✨ Resumen de las funcionalidades implementadas en js
+## ✨ Resumen de las funcionalidades implementadas en JS:
 
 | Paso | Acción                         | ¿Dónde se implementa?       | Descripción                                                                 |
 | ---- | ------------------------------ | --------------------------- | --------------------------------------------------------------------------- |
@@ -106,11 +106,11 @@ Aplicación para ingresar nombres en una lista y luego realizar un sorteo aleato
 
 
 ---
-### 🔐 Seguridad: Configuración  CSP en vercel.json
+### 🔐 Seguridad: Configuración  de CSP de Vercel
 
 Para mejorar la seguridad de esta aplicación desplegada en Vercel, se ha incluido el archivo vercel.json con una configuración personalizada de headers HTTP, según Política de Seguridad de Contenidos de Vercel. Esta configuración ayuda a proteger contra ataques comunes como XSS, clickjacking, sniffing de contenido y asegura que toda la navegación ocurra sobre HTTPS, permitiendo que todo el contenido se cargue únicamente desde el origen del sitio (scripts, imágenes, estilos, etc.). Para más información consulte la [documentación oficial de Vercel](https://vercel.com/docs/project-configuration).
 
-| **Cabecera**                          | **Valor aplicado**                                                                                                                                                                    | **Propósito**                                                            |
+| **Headers**                          | **Valor aplicado**                                                                                                                                                                    | **Función**                                                            |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | `Content-Security-Policy`             | `default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'self';` | Previene XSS e impone políticas de carga de recursos                     |
 | `X-Content-Type-Options`              | `nosniff`                                                                                                                                                                             | Impide que el navegador adivine el tipo de contenido                     |
@@ -123,7 +123,7 @@ Para mejorar la seguridad de esta aplicación desplegada en Vercel, se ha inclui
 
 ---
 
-## 🛠️ Instalación local 
+## 🛠️ Instalación local: 
 
 Sigue estos pasos para clonar y abrir el proyecto:
 
@@ -143,7 +143,7 @@ Haciendo doble click sobre index.html o utilizando una extensión como Live Serv
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Estructura del proyecto:
 
 ```text
 challenge-amigo-secreto_esp-main/
@@ -163,20 +163,20 @@ challenge-amigo-secreto_esp-main/
 ```
 ---
 
-🧠 Objetivo del proyecto
+🧠 Objetivo del proyecto:
 
 Proyecto creado con el objetivo de poner en práctica los conocimientos  adquiridos en la etapa de formación Lógica de Programación con JavaScript, del Programa ONE - Oracle Next Education G9. Comentado en las partes principales para su comprensión, puedes usarlo y modificarlo libremente, ya que está disponible para fines educativos.
 
 ---
 
-📝 Notas
+📝 Notas:
 
 La aplicación es completamente funcional, ideal para practicar y aprender lógica de programación y manipulación del DOM con JavaScript. Si la ejecutas en local, asegúrate de que todas las imágenes estén en la carpeta `assets/`. Sólo necesitarás conexión a internet para cargar las fuentes desde Google Fonts.
-El despligue en Vercel es opcional, el archivo `vercel.json` no afecta en el funcionamiento de la aplicación en casos desees usar Github Pages u otros servicios similares.
+El despligue en Vercel es opcional, el archivo `vercel.json` no afecta en el funcionamiento de la aplicación en caso desees usar GitHub Pages u otros servicios similares.
 
 ---
 
-✨ Créditos
+✨ Créditos:
 
 Desarrollado como ejercicio del Challenge Amigo Secreto, del programa ONE - Oracle Next Education G9.
 <br>
